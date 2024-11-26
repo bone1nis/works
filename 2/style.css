@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Header styles */
+.header {
+
+}
+.nav {
+
+}
+.nav__list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.nav__item {
+    list-style-type: none;
+}
+.nav__link {
+    font-size: 18px;
+    text-decoration: none;
+    color: gray;
+}
+
+/* Main */
+
+.main {
+
+}
+
+/* Welcome styles*/
+
+.welcome {
+
+}
+.welcome__title {
+    text-align: center;
+}
+.welcome__subtitle {
+    text-align: center;
+}
+.welcome__promo {
+    display: flex;
+    justify-content: center;
+}
+.preview {
+    margin-top: 30px;
+    border: 2px solid black;
+}
+.preview__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.preview__item {
+
+}
+.preview__cell {
+
+}
+.btn {
+
+}
+
+/* Assortment styles*/
+
+.assortment {
+
+}
+.assortment__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+}
+.assortment__item {
+    width: 500px;
+}
+.assortment__img {
+
+}
+.assortment__subtitle {
+    text-align: center;
+}
+
+.assortment__description {
+    text-align: center;
+}
+
+/* Order styles*/
+
+.order {
+
+}
+.order__wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.order__title {
+    text-align: center;
+}
+.form {
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+}
+.form__name {
+
+}
+.form__phone {
+
+}
+.form__email {
+
+}
+.form__cake {
+
+}
+.form__wishes {
+
+}
+.form__send {
+
+}
+
+/* Footer styles*/
+
+.footer {
+
+}
+.footer__title {
+    text-align: center;
+    margin-top: 30px;
+}

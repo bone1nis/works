@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="магазин, онлайн магазин, торт, пирожное">
+    <meta name="description" content="Кондитерская №1. Торты и пирожные на любой вкус.">
+    <link rel="stylesheet" href="style.css">
+    <title>Кондитерская</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#welcome" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="#assortment" class="nav__link">Ассортимент</a></li>
+                <li class="nav__item"><a href="#order" class="nav__link">Заказ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="welcome" id="welcome">
+            <div class="container">
+            <h1 class="welcome__title">Торты и пирожные с доставкой по Гелленджику</h1>
+            <h2 class="welcome__subtitle">Приготовим за несколько часов и доставим в самый краткий срок</h2>
+            <div class="welcome__promo">
+                <video src="sources/promo.mp4" width="500" height="300" controls autoplay></video>
+            </div>
+            <table class="preview">
+                <caption class="preview__title">Ассортимент</caption>
+                <tr class="preview__item">
+                    <th class="preview__cell">Название</th>
+                    <td class="preview__cell">Таврический торт</td>
+                    <td class="preview__cell">Шоколадный торт</td>
+                    <td class="preview__cell">Эклер</td>
+                </tr>
+                <tr class="preview__item">
+                    <th class="preview__cell">Цена</th>
+                    <td class="preview__cell">1100 руб.</td>
+                    <td class="preview__cell">1500 руб.</td>
+                    <td class="preview__cell">150 руб.</td>
+                </tr>
+                <tr class="preview__item">
+                    <th class="preview__cell">Описание</th>
+                    <td class="preview__cell">Нежный ванильный бисквит соединён воздушным безе и ароматным кремом. Верх торта покрыт кремом и украшен хрустящим дутым рисом, бока обсыпаны бисквитной крошкой</td>
+                    <td class="preview__cell">Имеет нежное шоколадное тесто, покрытое густой шоколадной глазурью. Внутри торта может быть шоколадный крем или мусс.</td>
+                    <td class="preview__cell">Пирожное в виде трубочки из заварного теста, покрытой помадкой, с начинкой из сливочно-масляного или заварного крема.</td>
+                </tr>
+            </table>
+        </div>
+        </section>
+        <section class="assortment" id="assortment">
+            <div class="container">
+                <div class="assortment__wrap">
+                    <div class="assortment__item">
+                        <img src="sources/assortment-1.jpg" alt="Торт" class="assortment__img" width="500" height="300">
+                        <h3 class="assortment__subtitle">Таврический торт</h3>
+                        <p class="assortment__description">Нежный ванильный бисквит соединён воздушным безе и ароматным кремом. Верх торта покрыт кремом и украшен хрустящим дутым рисом, бока обсыпаны бисквитной крошкой.</p>
+                    </div>
+                    <div class="assortment__item">
+                        <img src="sources/assortment-2.jpg" alt="Торт" class="assortment__img" width="500" height="300">
+                        <h3 class="assortment__subtitle">Шоколадный торт</h3>
+                        <p class="assortment__description">Имеет нежное шоколадное тесто, покрытое густой шоколадной глазурью. Внутри торта может быть шоколадный крем или мусс.</p>
+                    </div>
+                    <div class="assortment__item">
+                        <img src="sources/assortment-3.jpg" alt="Торт" class="assortment__img" width="500" height="300">
+                        <h3 class="assortment__subtitle">Эклеры</h3>
+                        <p class="assortment__description">Пирожное в виде трубочки из заварного теста, покрытой помадкой, с начинкой из сливочно-масляного или заварного крема.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="order" id="order">
+            <div class="container">
+                <div class="order__wrap">
+                <h2 class="order__title">Чтобы сделать заказ, заполните форму</h2>
+                <form action="#" method="GET" class="form">
+                    <input type="text" name="name" placeholder="Имя" class="form__name">
+                    <input type="tel" name="phone" placeholder="Номер телефона" class="form__phone">
+                    <input type="email" name="email" placeholder="Почта" class="form__email">
+                    <select name="cake" class="form__cake">
+                        <option value="0">Таврический торт</option>
+                        <option value="1">Шоколадный торт</option>
+                        <option value="2">Эклер</option>
+                    </select>
+                    <textarea name="wishes" placeholder="Пожелания к заказу" class="form__wishes"></textarea>
+                    <button class="form__send">Отправить</button>
+                </form>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="footer__title">© nazvaniesaita.ru, 2054 | Название компании или ИП ОГРН 0000000000000</h2>
+    </footer>
+
+    <script>
+        "use strict";
+        let form = document.querySelector(".form");
+
+        let formName = form.querySelector(".form__name");
+        let formPhone = form.querySelector(".form__phone")
+        let formEmail = form.querySelector(".form__email");
+        let formWishes = form.querySelector(".form__wishes");
+        let buttonSend = form.querySelector(".form__send");
+
+        buttonSend.addEventListener("click", function () {
+            formName.value = "";
+            formPhone.value = "";
+            formEmail.value = "";
+            formWishes.value = "";
+        });
+    </script>
+</body>
+</html>
