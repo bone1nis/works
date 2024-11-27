@@ -49,6 +49,7 @@ body {
 .welcome__promo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .preview {
     margin-top: 30px;
