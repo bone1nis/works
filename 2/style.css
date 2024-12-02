@@ -1,11 +1,22 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    margin: 0;
 }
 
 .container {
     width: 1200px;
     margin: 0 auto;
 }
+
+h1 {
+    color: hsl(0, 0%, 21%);
+}
+
+h2, h3, h4, h5, h6 {
+    color: hsl(0, 0%, 17%);
+}
+
 
 
 /* Header styles */
@@ -42,6 +53,7 @@ body {
 }
 .welcome__title {
     text-align: center;
+    font-size: 25px;
 }
 .welcome__subtitle {
     text-align: center;
@@ -52,9 +64,15 @@ body {
     align-items: center;
 }
 .preview {
-    margin-top: 30px;
+    background-image: url(sources/assortment-1.jpg), url(sources/assortment-1.jpg), linear-gradient(90deg, rgba(186, 255, 172, 0.2), rgb(158, 255, 139));
+    background-position: 0 100%, 100% 0, center;
+    background-repeat: no-repeat;
+    background-size: 50px, 50px, cover;
     border: 2px solid black;
+    box-shadow: 10px 12px 3px rgba(43, 255, 0, 0.2);
+    margin: 50px 0;
 }
+
 .preview__title {
     font-weight: bold;
     margin-bottom: 10px;
@@ -72,18 +90,24 @@ body {
 /* Assortment styles*/
 
 .assortment {
-
+    background-image: linear-gradient(90deg, rgba(105, 167, 93, 0.3), rgb(158, 255, 139));
+    border: 2px solid #000000;
+    border-left: none;
+    border-right: none;
 }
 .assortment__wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 50px;
 }
 .assortment__item {
     width: 500px;
 }
 .assortment__img {
-
+    border-radius: 4px;
+}
+.assortment__img:hover {
+    opacity: 0.8;
+    transition: all 1s;
 }
 .assortment__subtitle {
     text-align: center;
