@@ -1,6 +1,16 @@
+@font-face {
+    font-family: 'Playwrite';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./sources/fonts/Playwrite.woff2) format('woff2');
+}
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Playwrite", sans-serif;
     background-color: #fff;
+    box-sizing: border-box;
     margin: 0;
 }
 
@@ -15,6 +25,7 @@ h1 {
 
 h2, h3, h4, h5, h6 {
     color: hsl(0, 0%, 17%);
+    letter-spacing: 3px;
 }
 
 
@@ -100,7 +111,7 @@ h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, 1fr);
 }
 .assortment__item {
-    width: 500px;
+    max-width: 500px;
 }
 .assortment__img {
     border-radius: 4px;
@@ -115,6 +126,7 @@ h2, h3, h4, h5, h6 {
 
 .assortment__description {
     text-align: center;
+    line-height: 25px;
 }
 
 /* Order styles*/
