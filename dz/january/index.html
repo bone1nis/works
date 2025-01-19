@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        h2::first-line {
+            color: blue;
+        }
+        .list__item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid green;
+        }
+        .list__item:nth-child(odd) {
+            color: red;
+        }
+        .list__item:nth-child(even) {
+            color: blue;
+        }
+        .list__item::first-letter {
+            color: green;
+        }
+        .form {
+            margin: 20px;
+            border: 3px solid green;
+            border-radius: 5px;
+        }
+        .form__btn:hover {
+            color: green;
+        }
+        .form__input:focus {
+            border: 1px solid blue;
+        }
+        .form__input::placeholder {
+            color: red;
+        }
+        .advanced:not(h4) {
+            color: green;
+            border-radius: 5px;
+            box-shadow: 5px 5px 15px black;
+            padding: 15px;
+            margin: 5px;
+        }
+        .advanced::before {
+            content: "До";
+        }
+        .advanced::after {
+            content: "После";
+        }
+    </style>
+</head>
+<body>
+    <h2>Стилизация границ и отступов</h2>
+    <ul class="list">
+        <li class="list__item">Элемент списка</li>
+        <li class="list__item">Элемент списка</li>
+        <li class="list__item">Элемент списка</li>
+        <li class="list__item">Элемент списка</li>
+        <li class="list__item">Элемент списка</li>
+    </ul>
+    <form class="form">
+        <input type="text" placeholder="Введите текст" class="form__input">
+        <button class="form__btn">Отправить</button>
+    </form>
+    <div class="advanced">
+        <h3 class="advanced__title">Продвинутая стилизация</h3>
+    </div>
+    <h4 class="advanced">Продвинутая стилизация v2</h4>
+</body>
+</html>
