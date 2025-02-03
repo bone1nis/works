@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <title>Позиционирование и нормализация стилей</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav ul li {
+        position: relative;
+        display: inline;
+        margin: 0 10px;
+      }
+      nav ul li:hover .dropdown-content {
+        display: block;
+      }
+      main {
+        display: flex;
+        margin-top: 20px;
+      }
+      aside {
+        position: sticky;
+        flex: 1;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      a {
+        color: #4caf50;
+        transition: all 1s ease;
+      }
+      a:hover {
+        opacity: 0.5;
+      }
+
+      .dropdown-content {
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        color: black;
+        top: 100%;
+        left: 0;
+        width: 100px;
+        padding: 10px;
+        z-index: 1001;
+      }
+
+      .info {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        z-index: 100;
+      }
+
+      .main-section {
+        position: relative;
+        flex: 2;
+        padding: 20px;
+        background-color: white;
+        margin-right: 20px;
+      }
+
+      .additional-section {
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid black;
+        min-height: 100px;
+      }
+
+      .additional-section__links {
+        margin-top: 20px;
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+      }
+
+      .additional-section__block {
+        position: relative;
+      }
+      .additional-section__block:hover .additional-section__dropdown {
+        transition: all 1s ease;
+        display: inline-block;
+      }
+      .additional-section__dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        color: #fff;
+        background-color: #4caf50;
+        padding: 10px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Шаблон страницы</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Главная</a>
+          <a href="#" class="dropdown-content">Подраздел</a>
+        </li>
+        <li>
+          <a href="#">О нас</a
+          ><a href="#" class="dropdown-content">Подраздел</a>
+        </li>
+        <li>
+          <a href="#">Контакты</a
+          ><a href="#" class="dropdown-content">Подраздел</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="main-section">
+        <button class="info">Важная информация</button>
+        <h2>Основной контент</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+        <section class="additional-section">
+          <h2>Дополнительная секция</h2>
+          <div class="additional-section__links">
+            <div class="additional-section__block">
+              <a href="#" class="additional-section__link">
+                Ссылка
+                <a href="#" class="additional-section__dropdown">Подраздел</a>
+              </a>
+            </div>
+            <div class="additional-section__block">
+              <a href="#" class="additional-section__link">
+                Ссылка
+                <a href="#" class="additional-section__dropdown">Подраздел</a>
+              </a>
+            </div>
+            <div class="additional-section__block">
+              <a href="#" class="additional-section__link">
+                Ссылка
+                <a href="#" class="additional-section__dropdown">Подраздел</a>
+              </a>
+            </div>
+            <div class="additional-section__block">
+              <a href="#" class="additional-section__link">
+                Ссылка
+                <a href="#" class="additional-section__dropdown">Подраздел</a>
+              </a>
+            </div>
+            <div class="additional-section__block">
+              <a href="#" class="additional-section__link">
+                Ссылка
+                <a href="#" class="additional-section__dropdown">Подраздел</a>
+              </a>
+            </div>
+          </div>
+        </section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut. Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Assumenda error et neque eum. Itaque aspernatur pariatur a dicta
+          vero similique sequi minus porro, velit tempora laudantium et maiores!
+          Nam, repudiandae?Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Distinctio accusamus vel ex at provident consequuntur! Voluptate
+          expedita asperiores cupiditate? Corporis expedita provident tenetur
+          recusandae neque aliquam, accusantium voluptas repellat tempora?Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Id, rerum eum?
+          Aperiam maiores delectus ab laborum explicabo et optio reprehenderit.
+          Voluptatem perspiciatis ex quo tenetur sequi ea dolorum dicta
+          earum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          dicta explicabo velit libero quaerat non. Eum adipisci necessitatibus
+          atque minus iusto aperiam esse similique! Dicta eaque officia minus
+          facere voluptatem! Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Adipisci, temporibus minima. Itaque praesentium incidunt, eum
+          minima inventore, ex dolorum nemo culpa in modi quae mollitia
+          voluptate recusandae quasi dolores. Soluta. Et facilis ab iusto non.
+          Ipsum iusto, sint aliquam deleniti beatae amet dolores aut distinctio
+          ea sunt iure sequi optio architecto. Aspernatur sequi impedit eius eum
+          totam aut quasi similique? Molestias ullam possimus sequi sunt, quo
+          consectetur aliquam non iste omnis nisi officiis debitis est veniam
+          laborum soluta recusandae impedit expedita cupiditate at similique
+          adipisci. Earum aliquam quae ipsam? Blanditiis? Dolorem voluptates
+          repellendus facilis maiores architecto rem tenetur quis nulla, fugiat
+          officiis odit quo totam eius aspernatur porro tempora facere provident
+          deleniti reprehenderit adipisci expedita harum in eveniet accusamus.
+          Consectetur? Nisi nam molestiae, vero consequuntur blanditiis aliquam
+          architecto provident incidunt praesentium. Dignissimos aperiam amet
+          autem? Maxime, quibusdam cum ullam omnis, ad dolor dicta incidunt
+          aperiam provident amet voluptatem quia in? Labore nobis ipsa quisquam
+          ullam inventore earum, fugiat blanditiis sapiente ab nulla hic, et
+          facilis. Ea magni error tempore eveniet, sapiente necessitatibus
+          aliquid, quibusdam nobis facere velit reprehenderit? Ipsa, aspernatur.
+          Dolor obcaecati laudantium ipsa consectetur nulla dicta esse, unde
+          aperiam, excepturi exercitationem, expedita rem optio? Iste harum
+          magnam eaque odio voluptates. Sequi sint veritatis suscipit enim
+          maxime? Deserunt, voluptatem quia. Harum aspernatur natus quaerat
+          consequatur fugiat, laborum totam? Neque, hic magni soluta aut autem,
+          tempora alias quis, expedita aliquid aspernatur libero laudantium
+          maiores ducimus sequi repellat pariatur non? Minus, a? Debitis iusto
+          beatae vitae rerum. Distinctio officiis tempora temporibus quibusdam,
+          ea necessitatibus aspernatur sequi illo ipsum maxime officia molestias
+          recusandae iusto sunt accusamus, aperiam eligendi, ab eos praesentium
+          neque. Consequatur. Dolor doloribus quibusdam, aperiam suscipit
+          ducimus facilis asperiores eum quis sit molestias blanditiis
+          distinctio excepturi officiis placeat, voluptates sint? Officia omnis
+          voluptate quo molestiae. Quidem eaque voluptas corporis quam sed.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut. Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Assumenda error et neque eum. Itaque aspernatur pariatur a dicta
+          vero similique sequi minus porro, velit tempora laudantium et maiores!
+          Nam, repudiandae?Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Distinctio accusamus vel ex at provident consequuntur! Voluptate
+          expedita asperiores cupiditate? Corporis expedita provident tenetur
+          recusandae neque aliquam, accusantium voluptas repellat tempora?Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Id, rerum eum?
+          Aperiam maiores delectus ab laborum explicabo et optio reprehenderit.
+          Voluptatem perspiciatis ex quo tenetur sequi ea dolorum dicta
+          earum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          dicta explicabo velit libero quaerat non. Eum adipisci necessitatibus
+          atque minus iusto aperiam esse similique! Dicta eaque officia minus
+          facere voluptatem! Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Adipisci, temporibus minima. Itaque praesentium incidunt, eum
+          minima inventore, ex dolorum nemo culpa in modi quae mollitia
+          voluptate recusandae quasi dolores. Soluta. Et facilis ab iusto non.
+          Ipsum iusto, sint aliquam deleniti beatae amet dolores aut distinctio
+          ea sunt iure sequi optio architecto. Aspernatur sequi impedit eius eum
+          totam aut quasi similique? Molestias ullam possimus sequi sunt, quo
+          consectetur aliquam non iste omnis nisi officiis debitis est veniam
+          laborum soluta recusandae impedit expedita cupiditate at similique
+          adipisci. Earum aliquam quae ipsam? Blanditiis? Dolorem voluptates
+          repellendus facilis maiores architecto rem tenetur quis nulla, fugiat
+          officiis odit quo totam eius aspernatur porro tempora facere provident
+          deleniti reprehenderit adipisci expedita harum in eveniet accusamus.
+          Consectetur? Nisi nam molestiae, vero consequuntur blanditiis aliquam
+          architecto provident incidunt praesentium. Dignissimos aperiam amet
+          autem? Maxime, quibusdam cum ullam omnis, ad dolor dicta incidunt
+          aperiam provident amet voluptatem quia in? Labore nobis ipsa quisquam
+          ullam inventore earum, fugiat blanditiis sapiente ab nulla hic, et
+          facilis. Ea magni error tempore eveniet, sapiente necessitatibus
+          aliquid, quibusdam nobis facere velit reprehenderit? Ipsa, aspernatur.
+          Dolor obcaecati laudantium ipsa consectetur nulla dicta esse, unde
+          aperiam, excepturi exercitationem, expedita rem optio? Iste harum
+          magnam eaque odio voluptates. Sequi sint veritatis suscipit enim
+          maxime? Deserunt, voluptatem quia. Harum aspernatur natus quaerat
+          consequatur fugiat, laborum totam? Neque, hic magni soluta aut autem,
+          tempora alias quis, expedita aliquid aspernatur libero laudantium
+          maiores ducimus sequi repellat pariatur non? Minus, a? Debitis iusto
+          beatae vitae rerum. Distinctio officiis tempora temporibus quibusdam,
+          ea necessitatibus aspernatur sequi illo ipsum maxime officia molestias
+          recusandae iusto sunt accusamus, aperiam eligendi, ab eos praesentium
+          neque. Consequatur. Dolor doloribus quibusdam, aperiam suscipit
+          ducimus facilis asperiores eum quis sit molestias blanditiis
+          distinctio excepturi officiis placeat, voluptates sint? Officia omnis
+          voluptate quo molestiae. Quidem eaque voluptas corporis quam sed.
+        </p>
+      </section>
+      <aside>
+        <h2>Сайдбар</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+          praesentium quis eligendi illum expedita rem iure corporis nulla aut
+          provident deserunt perspiciatis numquam, architecto neque. Illo enim
+          quam natus ut.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Подвал страницы</p>
+    </footer>
+  </body>
+</html>
