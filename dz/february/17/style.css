@@ -7,20 +7,18 @@
 body {
     font-family: "Livvic", serif;
     margin: 0;
-    font-weight: 400;
     word-break: break-all;
     background-color: #344c31;
     height: 100vh;
+    color: #fff;
 }
 
 p {
-    font-weight: 400;
     margin: 0;
     padding: 0;
 }
 
 a {
-    font-weight: 400;
     color: #fff;
     text-decoration: none;
 }
@@ -30,6 +28,24 @@ ul {
     padding: 0;
 }
 
+input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    border: none;
+    overflow: hidden;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -37,7 +53,7 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
@@ -45,6 +61,28 @@ h6 {
 .container {
     width: 1200px;
     margin: 0 auto;
+}
+
+.btn {
+    display: block;
+    border-radius: 20px;
+    background: #f7c35f;
+    height: 70px;
+    width: 220px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #f6d086;
+}
+
+.btn:focus {
+    background: #c58d21;
+}
+
+.btn:active {
+    background: #a16c06;
 }
 
 .leader {
@@ -74,11 +112,89 @@ h6 {
     gap: 40px;
 }
 
-.btn {
-    display: block;
-    border-radius: 20px;
-    background: #f7c35f;
+
+.form {}
+
+
+.form__wrapper {
+    padding: 100px 0;
+    display: flex;
+    gap: 140px;
+
+}
+
+.form__info {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 650px;
+    height: 570px;
+}
+
+.info {}
+
+.info__main {}
+
+.form__subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.form__title {
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 45px;
+}
+
+.form__text {
+    font-size: 18px;
+}
+
+.info__description {}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.description__block {}
+
+.description__title {
+    font-size: 14px;
+    line-height: 214%;
+    text-transform: uppercase;
+}
+
+.description__text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 135%;
+    margin-bottom: 7px;
+}
+
+.form__main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 660px;
     height: 70px;
-    width: 220px;
-    border: none;
+}
+
+.form__input {
+    border-radius: 10px;
+    padding: 25px 22px;
+    background: #263c28;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form__textarea {
+    border-radius: 10px;
+    padding: 25px 22px 140px 22px;
+    background: #263c28;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
 }
