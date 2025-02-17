@@ -37,6 +37,22 @@ h6 {
   width: 1200px;
   margin: 0 auto;
 }
+.btn {
+  padding: 10px 30px;
+  background-color: #f7bc75;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #fff;
+}
+.btn:focus {
+  border: 1px solid #f7bc75;
+}
+.btn:active {
+  opacity: 0.8;
+}
 
 .welcome {
 }
@@ -174,6 +190,20 @@ h6 {
   grid-column: 2 / 4;
   border-radius: 20px;
   background-color: #ffe38e;
+}
+
+.leader {
+  background: linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url(resources/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.leaders__imgs {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.leader__img {
 }
 
 @media (max-width: 1280px) {
